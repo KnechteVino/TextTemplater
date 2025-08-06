@@ -1,0 +1,27 @@
+[project]
+name = "texttemplater"
+dynamic = ["version"]
+description = "Create unique texts with templates and datasets."
+authors = [
+		{ name="Lucas Weinknecht", email="texttemplater@artsberg.de" }
+]
+readme = "README.md"
+requires-python = ">=3.13"
+license = "GPL-3.0-or-later"
+license-files = ["LICEN[CS]E*"]
+classifiers = [
+			"Programming Language :: Python :: 3",
+			"Operating System :: OS Independent"
+]
+dependencies = [ ]
+
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+exclude = ["*_tests"]
+
+[tool.setuptools.dynamic]
+version = {attr = "texttemplater.__VERSION__"}
